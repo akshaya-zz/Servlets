@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(java -version)",
+      "Bash(mvn -version)",
+      "Bash(catalina version *)",
+      "Bash(ls ~/.vscode/extensions/ | grep -i tomcat)",
+      "Read(//Users/akshayaatm/.vscode/extensions/**)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('Engine:', d.get\\('engines',{}\\)\\); print\\('Config:', json.dumps\\(d.get\\('contributes',{}\\).get\\('configuration',{}\\), indent=2\\)\\)\")",
+      "Bash(ls /opt/homebrew/opt/tomcat/libexec/)",
+      "Read(//opt/homebrew/Cellar/tomcat/11.0.18/libexec/**)",
+      "Bash(ls ~/.m2/repository/jakarta/websocket/jakarta.websocket-api/2.1.0/ 2>/dev/null || echo \"NOT FOUND in local Maven repo\")",
+      "Read(//Users/akshayaatm/.m2/repository/jakarta/websocket/jakarta.websocket-api/2.1.0/**)",
+      "Bash(mvn dependency:resolve -q)",
+      "Bash(jar tf *)",
+      "Bash(grep \"\\\\.class$\")",
+      "Bash(find ~/.m2/repository/jakarta/websocket -name \"*.jar\" | grep -v sources | grep -v javadoc && echo \"---\" && ls ~/.m2/repository/jakarta/websocket/)",
+      "Read(//Users/akshayaatm/.m2/repository/jakarta/websocket/**)",
+      "Bash(find /usr/local /opt /Users/akshayaatm -maxdepth 5 -name \"catalina.sh\" 2>/dev/null | head -5)",
+      "Read(//usr/local/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/welcome/)",
+      "Bash(cat /opt/homebrew/Cellar/tomcat/11.0.18/libexec/conf/server.xml | grep -i 'Connector port')",
+      "Read(//opt/homebrew/etc/tomcat/**)"
+    ]
+  }
+}

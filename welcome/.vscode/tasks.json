@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Deploy & Open Browser",
+            "type": "shell",
+            "command": "mvn clean package && cp target/welcome.war /opt/homebrew/opt/tomcat/libexec/webapps/ && (catalina stop 2>/dev/null; sleep 2; catalina start && sleep 4 && open http://localhost:8080/welcome)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "clear": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

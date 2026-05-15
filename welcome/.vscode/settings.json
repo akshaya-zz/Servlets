@@ -1,0 +1,11 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "local-tomcat.tomcatInstances": [
+        {
+            "name": "Tomcat 11 (Homebrew)",
+            "catalinaHome": "/opt/homebrew/opt/tomcat/libexec",
+            "deploymentPort": 8080
+        }
+    ],
+    "local-tomcat.warDir": "target"
+}
